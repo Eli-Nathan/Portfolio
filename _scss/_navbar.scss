@@ -1,17 +1,120 @@
 nav.navbar {
-  background: #fff;
-  border-bottom: 1px solid #e5e5e5;
-  .navbar-toggler {
-    background:#eee;
-    color:#333333;
-  }
-  .navbar-brand {
-    color: $text;
-  }
+  color:#fff;
   ul {
     li {
       a.nav-link {
-        color: $text;
+        color: #fff;
+      }
+    }
+  }
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #fff;
+  border-right: 1px solid #e5e5e5;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+/* Sidebar Styles */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    text-indent: 20px;
+    line-height: 40px;
+    a {
+      display: block;
+      text-decoration: none;
+      color: #343A40;
+      font-size:14px;
+      &:hover {
+        text-decoration: none;
+        color: #343A40;
+        background: #fafafa;
+      }
+      &:active, &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+  &__heading {
+    display: block;
+    color:#999999;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-top:20px;
+  }
+  > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+    a {
+      color: #333;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    width: 250px;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+}
+
+.menu-icon {
+  cursor: pointer;
+  position: fixed;
+  z-index: 1000;
+  right: 10px;
+  color: #fff!important;
+  @media(min-width:768px) {
+    display: none;
+  }
+  svg {
+    width:70px;
+    -webkit-filter: drop-shadow( 0 0 5px rgba(#000, .5) );
+    filter: drop-shadow( 0 0 5px rgba(#000, .5) );
+    circle{
+      fill: #cc5b23;
+    }
+    .close {
+      display: none;
+    }
+  }
+}
+#wrapper.toggled {
+  svg {
+    -webkit-transition: -webkit-transform .8s;
+    transition: transform .8s;
+    transform: rotate(270deg);
+    .open {
+      display:none;
+    }
+    .close {
+      display: block;
+      fill: #fff;
+      path {
+        fill:#fff!important;
       }
     }
   }

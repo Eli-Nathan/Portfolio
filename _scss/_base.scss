@@ -1,0 +1,132 @@
+body {
+  overflow-x: hidden;
+  background: #fafafa;
+  margin-top:56px;
+  font-family: 'Montserrat', sans-serif;
+  color: #343A40;
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .en-h1,
+  h1 {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  @media (min-width: 768px) {
+    .en-h1,
+    h1 {
+      font-size: 30px;
+      line-height: 42px;
+    }
+  }
+
+  .en-h2,
+  h2 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  @media (min-width: 768px) {
+    .en-h2,
+    h2 {
+      font-size: 26px;
+      line-height: 36px;
+    }
+  }
+
+  .en-h3,
+  h3 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  @media (min-width: 768px) {
+    .en-h3,
+    h3 {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  .en-h4,
+  h4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .en-h4,
+    h4 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .en-h5,
+  h5 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .en-h5,
+    h5 {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .en-h6,
+  h6 {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  @media (min-width: 768px) {
+    .en-h6,
+    h6 {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  .en-p,
+  p {
+    font-size: 14px;
+    margin: 0 0 12px;
+  }
+}
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  &.toggled {
+    padding-left: 250px;
+  }
+}
+
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding-top: 12px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+@media (min-width: 768px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+#page-content-wrapper {
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: -250px;
+  }
+  .page-content {
+    padding: 80px;
+    padding-top:20px;
+  }
+}
