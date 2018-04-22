@@ -12,11 +12,13 @@ nav.navbar {
 #sidebar-wrapper {
   z-index: 1000;
   position: fixed;
-  left: 250px;
+  left: 100vw;
   width: 0;
   height: 100%;
-  margin-left: -250px;
-  overflow-y: auto;
+  margin-left: -100vw;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
   background: #fff;
   border-right: 1px solid #e5e5e5;
   -webkit-transition: all 0.5s ease;
@@ -26,16 +28,17 @@ nav.navbar {
 }
 
 #wrapper.toggled #sidebar-wrapper {
-  width: 250px;
+  width: 100vw;
 }
 
 /* Sidebar Styles */
 .sidebar-nav {
-  position: absolute;
+  position: relative;
   top: 0;
-  width: 250px;
+  width: 100vw;
   margin: 0;
   padding: 0;
+  padding-bottom:80px;
   list-style: none;
   li {
     text-indent: 20px;
@@ -74,10 +77,10 @@ nav.navbar {
 
 @media (min-width: 768px) {
   #sidebar-wrapper {
-    width: 250px;
+    width: 200px;
   }
   #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 200px;
   }
 }
 
