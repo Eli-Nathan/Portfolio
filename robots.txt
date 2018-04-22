@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: Add sitemap URL here
