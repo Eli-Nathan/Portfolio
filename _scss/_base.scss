@@ -6,7 +6,9 @@ body {
   color: #343A40;
   overflow-y: auto; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
-
+.en-h1, h1, .en-h2, h2, .en-h3, h3, .en-h4, h4, .en-h5, h5, .en-h6, h6 {
+  color: #626E7A;
+}
   p {
     font-size: 14px;
     line-height: 1.7;
@@ -95,6 +97,10 @@ body {
     font-size: 14px;
     margin: 0 0 12px;
   }
+}
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 #wrapper {
